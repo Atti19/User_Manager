@@ -1,0 +1,11 @@
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\User_Manager.exe.config
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\User_Manager.exe
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\User_Manager.pdb
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.AssemblyReference.cache
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.SuggestedBindingRedirects.cache
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Form1.resources
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Properties.Resources.resources
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.GenerateResource.cache
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.CoreCompileInputs.cache
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.exe
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.pdb
