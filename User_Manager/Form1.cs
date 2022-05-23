@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace User_Manager
 {
@@ -32,6 +33,15 @@ namespace User_Manager
         private void label3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            runQuery();
+        }
+        private void runQuery()
+        {
+
         }
     }
 }

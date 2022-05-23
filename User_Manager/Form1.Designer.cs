@@ -72,6 +72,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::User_Manager.Properties.Resources.sec;
             this.pictureBox2.Location = new System.Drawing.Point(24, 207);
             this.pictureBox2.Name = "pictureBox2";
@@ -82,6 +83,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::User_Manager.Properties.Resources.profile;
             this.pictureBox1.Location = new System.Drawing.Point(24, 140);
             this.pictureBox1.Name = "pictureBox1";
@@ -163,6 +165,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "LOG IN";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

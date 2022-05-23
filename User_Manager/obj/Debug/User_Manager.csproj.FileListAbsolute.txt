@@ -9,3 +9,16 @@ D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.Gene
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.CoreCompileInputs.cache
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.exe
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.pdb
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\Google.Protobuf.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\ZstdNet.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\BouncyCastle.Crypto.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\Ubiety.Dns.Core.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\System.Memory.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\System.Buffers.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\K4os.Compression.LZ4.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\K4os.Hash.xxHash.dll
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.xml
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.exe.config
+D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.CopyComplete
