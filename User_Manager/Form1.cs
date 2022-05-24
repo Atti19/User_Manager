@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace User_Manager
 {
-    public partial class Form1 : Form
+    public partial class Form2 : System.Windows.Forms.Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
@@ -44,7 +44,8 @@ namespace User_Manager
             list = test.Select(name);
             if(txtUsername.Text == list[1] && txtPassw.Text == list[2])
             {
-                new Form = new Form2.cs;
+                new Form3().Show();
+                this.Hide();
             }
             else
             {

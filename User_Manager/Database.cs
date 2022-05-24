@@ -120,9 +120,9 @@ namespace User_Manager
             }
 
             //Delete statement
-            public void Delete()
+            public void Delete(string name)
             {
-                string query = "DELETE FROM tableinfo WHERE name='John Smith'";
+                string query = $"DELETE FROM users WHERE nume = '{name}'";
 
                 if (this.OpenConnection() == true)
                 {
