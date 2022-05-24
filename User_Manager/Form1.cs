@@ -14,6 +14,7 @@ namespace User_Manager
 {
     public partial class Form2 : System.Windows.Forms.Form
     {
+        public static string textPassedForm1;
         public Form2()
         {
             InitializeComponent();
@@ -44,7 +45,9 @@ namespace User_Manager
             list = test.Select(name);
             if(txtUsername.Text == list[1] && txtPassw.Text == list[2])
             {
-                new Form3().Show();
+                Form3 f2 = new Form3();
+                textPassedForm1 = txtUsername.Text;
+                f2.Show();
                 this.Hide();
             }
             else
