@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 using MySql.Data.MySqlClient;
 
 namespace User_Manager
@@ -37,11 +38,20 @@ namespace User_Manager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            runQuery();
+            string[] list = new string[6];
+            string name = txtUsername.Text;
+            DBconnect test = new DBconnect();
+            list = test.Select(name);
+            if(txtUsername.Text == list[1] && txtPassw.Text == list[2])
+            {
+                new Form = new Form2.cs;
+            }
+            else
+            {
+                MessageBox.Show("Wrong password or user");
+                txtPassw.Clear();
+            }
         }
-        private void runQuery()
-        {
 
-        }
     }
 }

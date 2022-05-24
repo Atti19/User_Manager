@@ -22,3 +22,7 @@ D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\K4os.Hash.xxHash.dll
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.xml
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.exe.config
 D:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.csproj.CopyComplete
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.EntityFramework.dll
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Web.dll
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.EntityFramework.xml
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Web.xml
