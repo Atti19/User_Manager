@@ -1,5 +1,7 @@
 ﻿using MySql;
 using MySql.Data.MySqlClient;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -77,7 +79,18 @@ namespace User_Manager
                 }
             }
 
-            //Insert statement
+        //Insert statement
+            public void Insert_activity(string nume)
+            {
+                DateTime data = DateTime.Now;
+                string query = $"INSERT INTO activities (Name, Activity) VALUES('{nume}','{data.ToString()}')";
+                if(this.OpenConnection() == true)
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.ExecuteNonQuery();
+                    this.CloseConnection();
+                }
+            }
             public void Insert(string name, string pw, long cnp, long tel)
             {
                 string query = $"INSERT INTO users (nume, passw, cnp, tel, nivel) VALUES('{name}','{pw}','{cnp}','{tel}','1')";
@@ -133,6 +146,25 @@ namespace User_Manager
             }
 
         //Select statement
+        public Stack Select_activity(string nume)
+        {
+            string query = $"SELECT * FROM activities where name = '{nume}'";
+            Stack stack = new Stack();
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {      
+                    stack.Push((dataReader["Name"] + ""));
+                    stack.Push((dataReader["Activity"] + ""));
+                }
+                dataReader.Close();
+                this.CloseConnection();
+                return stack;
+            }
+            else return stack;
+        }
         public string[] Select(string user)
         {
             string query = $"SELECT * FROM users where nume = '{user}'";

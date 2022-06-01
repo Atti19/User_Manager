@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,12 +44,21 @@ namespace User_Manager
             string name = txtUsername.Text;
             DBconnect test = new DBconnect();
             list = test.Select(name);
+            //list5 = nivel
             if(txtUsername.Text == list[1] && txtPassw.Text == list[2])
             {
-                Form3 f2 = new Form3();
-                textPassedForm1 = txtUsername.Text;
-                f2.Show();
-                this.Hide();
+                if (list[5].Equals("1"))
+                {
+                    //User form
+                    Form3 f2 = new Form3();
+                    textPassedForm1 = txtUsername.Text;
+                    f2.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    //admin form
+                }
             }
             else
             {
