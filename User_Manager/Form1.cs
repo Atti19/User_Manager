@@ -58,6 +58,10 @@ namespace User_Manager
                 else
                 {
                     //admin form
+                    Form5 f5 = new Form5();
+                    textPassedForm1 = txtUsername.Text;
+                    f5.Show();
+                    this.Hide();
                 }
             }
             else
@@ -67,5 +71,11 @@ namespace User_Manager
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Show();
+            this.Hide();
+        }
     }
 }

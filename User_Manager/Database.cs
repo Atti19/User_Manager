@@ -91,7 +91,7 @@ namespace User_Manager
                     this.CloseConnection();
                 }
             }
-            public void Insert(string name, string pw, long cnp, long tel)
+            public void Insert(string name, string pw, string cnp, long tel)
             {
                 string query = $"INSERT INTO users (nume, passw, cnp, tel, nivel) VALUES('{name}','{pw}','{cnp}','{tel}','1')";
 

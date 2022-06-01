@@ -27,3 +27,5 @@ d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Data.EntityFramewo
 d:\Egyetem\An3\IPDP\User_Manager\User_Manager\bin\Debug\MySql.Web.xml
 d:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Form2.resources
 d:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Form3.resources
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Form4.resources
+d:\Egyetem\An3\IPDP\User_Manager\User_Manager\obj\Debug\User_Manager.Form5.resources
