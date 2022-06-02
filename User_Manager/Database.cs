@@ -165,6 +165,29 @@ namespace User_Manager
             }
             else return stack;
         }
+
+        public Stack Select_all()
+        {
+            string query = "Select * FROM users";
+            Stack stack = new Stack();
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    stack.Push((dataReader["id"] + ""));
+                    stack.Push((dataReader["nume"] + ""));
+                    stack.Push((dataReader["cnp"] + ""));
+                    stack.Push((dataReader["tel"] + ""));
+                    stack.Push((dataReader["nivel"] + ""));
+                }
+                dataReader.Close();
+                this.CloseConnection();
+                return stack;
+            }
+            else return stack;
+        }
         public string[] Select(string user)
         {
             string query = $"SELECT * FROM users where nume = '{user}'";
