@@ -75,14 +75,16 @@ namespace User_Manager
         {
             string textboxText = textBox1.Text;
             DBconnect dbconnect = new DBconnect();
-            dbconnect.Update(textboxText)
+            dbconnect.Update(textboxText);
+            MessageBox.Show("Updated");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string textboxText = textboxText.Text;
+            string textboxText = textBox1.Text;
             DBconnect dBconnect = new DBconnect();
             dBconnect.Delete(textboxText);
+            MessageBox.Show("Deleted");
         }
 
         private void label3_Click(object sender, EventArgs e)
