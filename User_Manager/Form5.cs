@@ -35,6 +35,7 @@ namespace User_Manager
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
             DBconnect dBconnect = new DBconnect(); 
             Stack all_members = new Stack();
             all_members = dBconnect.Select_all();
@@ -52,6 +53,41 @@ namespace User_Manager
                 textBox1.Text += "Nivel: " + nivel + ", ";
                 textBox1.AppendText("\r\n");
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            DBconnect dbconnect = new DBconnect();
+            Stack all_activity = new Stack();
+            all_activity = dbconnect.Select_all_Activities();
+            while(all_activity.Count > 0)
+            {
+                string activity = all_activity.Pop().ToString();
+                string name = all_activity.Pop().ToString();
+                textBox1.Text += "Name: " + name + ", ";
+                textBox1.Text += "Activity: " + activity + ", ";
+                textBox1.AppendText("\r\n");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string textboxText = textBox1.Text;
+            DBconnect dbconnect = new DBconnect();
+            dbconnect.Update(textboxText)
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string textboxText = textboxText.Text;
+            DBconnect dBconnect = new DBconnect();
+            dBconnect.Delete(textboxText);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

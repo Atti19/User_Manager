@@ -15,13 +15,12 @@ namespace User_Manager
             private string uid;
             private string password;
 
-            //Constructor
             public DBconnect()
             {
                 Initialize();
             }
 
-            //Initialize values
+            
             private void Initialize()
             {
                 server = "localhost";
@@ -45,11 +44,7 @@ namespace User_Manager
                 }
                 catch (MySqlException ex)
                 {
-                    //When handling errors, you can your application's response based 
-                    //on the error number.
-                    //The two most common error numbers when connecting are as follows:
-                    //0: Cannot connect to server.
-                    //1045: Invalid user name and/or password.
+
                     switch (ex.Number)
                     {
                         case 0:
@@ -95,39 +90,25 @@ namespace User_Manager
             {
                 string query = $"INSERT INTO users (nume, passw, cnp, tel, nivel) VALUES('{name}','{pw}','{cnp}','{tel}','1')";
 
-                //open connection
                 if (this.OpenConnection() == true)
                 {
-                    //create command and assign the query and connection from the constructor
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-
-                    //Execute command
                     cmd.ExecuteNonQuery();
-
-                    //close connection
                     this.CloseConnection();
                 }
             }
 
             //Update statement
-            public void Update()
+            public void Update(string name)
             {
-                string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+                string query = $"UPDATE users SET nivel = '2' WHERE nume='{name}'";
 
-                //Open connection
                 if (this.OpenConnection() == true)
-                {
-                    //create mysql command
+                {    
                     MySqlCommand cmd = new MySqlCommand();
-                    //Assign the query using CommandText
                     cmd.CommandText = query;
-                    //Assign the connection using Connection
                     cmd.Connection = connection;
-
-                    //Execute query
                     cmd.ExecuteNonQuery();
-
-                    //close connection
                     this.CloseConnection();
                 }
             }
@@ -165,7 +146,25 @@ namespace User_Manager
             }
             else return stack;
         }
-
+        public Stack Select_all_Activities()
+        {
+            string query = "Select * FROM activities";
+            Stack stack = new Stack();
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    stack.Push((dataReader["Name"] + ""));
+                    stack.Push((dataReader["Activity"] + ""));
+                }
+                dataReader.Close();
+                this.CloseConnection();
+                return stack;
+            }
+            else return stack;
+        }
         public Stack Select_all()
         {
             string query = "Select * FROM users";
@@ -192,17 +191,11 @@ namespace User_Manager
         {
             string query = $"SELECT * FROM users where nume = '{user}'";
 
-            //Create a list to store the result
             string[] list = new string[6];
-            //Open connection
             if (this.OpenConnection() == true)
             {
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     list[0]=(dataReader["id"] + "");
@@ -212,14 +205,8 @@ namespace User_Manager
                     list[4]=(dataReader["tel"] + "");
                     list[5]=(dataReader["nivel"] + "");
                 }
-
-                //close Data Reader
                 dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
+                this.CloseConnection();  
                 return list;
             }
             else

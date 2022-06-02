@@ -75,7 +75,6 @@ namespace User_Manager
         {
             Form4 f4 = new Form4();
             f4.Show();
-            this.Hide();
         }
     }
 }
